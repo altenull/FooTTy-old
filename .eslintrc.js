@@ -15,8 +15,8 @@ module.exports = {
         "flowtype"
     ],
     "rules": {
-        "indent": ["warn", 4],
-        "semi": ["error", "always"],
+        "indent": ["warn", 2],
+        "semi": ["warn", "never"],
         "space-before-function-paren": 0,
         "class-methods-use-this": 0,
         "react/jsx-filename-extension": 0,

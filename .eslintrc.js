@@ -16,7 +16,7 @@ module.exports = {
     ],
     "rules": {
         "indent": ["warn", 2],
-        "semi": ["warn", "never"],
+        "semi": 0,
         "space-before-function-paren": 0,
         "class-methods-use-this": 0,
         "react/jsx-filename-extension": 0,
@@ -25,7 +25,6 @@ module.exports = {
         "arrow-body-style": 0,
         "import/prefer-default-export": 1,
         "react/prop-types": 0,
-        "react/self-closing-comp": 1,
         "react/prefer-stateless-function": 0,
         "react/default-props-match-prop-types": 0,
         "no-underscore-dangle": 0,

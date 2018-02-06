@@ -1,2 +1,2 @@
-#FooTTy
+# FooTTy
 A Football Terminal

@@ -3,11 +3,15 @@
 .landing-template {
   display: flex;
   justify-content: space-between;
+  width: 90vw;
+  @include media('<medium') {
+    width: 95vw;
+    flex-direction: column;
+  }
   .left-wrapper {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    margin-right: 5rem;
     h1 {
       color: $oc-gray-6;
       font-size: 5.5rem;
@@ -15,6 +19,19 @@
       user-select: none;
       margin: 0;
       padding: 0;
+      transition: .2s ease-in;
+      @include media('<huge') {
+        font-size: 4.5rem;
+      }
+      @include media('<large') {
+        font-size: 3.5rem;
+      }
+      @include media('<medium') {
+        font-size: 3rem;
+      }
+      @include media('<small') {
+        font-size: 2.5rem;
+      }
     }
     h2 {
       color: $oc-gray-6;
@@ -23,14 +40,38 @@
       user-select: none;
       margin: 0;
       padding: 0;
+      transition: .2s ease-in;
+      @include media('<huge') {
+        font-size: 2.8rem;
+      }
+      @include media('<large') {
+        font-size: 2.3rem;
+      }
+      @include media('<medium') {
+        font-size: 2rem;
+      }
+      @include media('<small') {
+        font-size: 1.7rem;
+      }
     }
-    p {
+    h3 {
       color: $oc-gray-7;
       font-size: 2rem;
       font-weight: 700;
       user-select: none;
+      transition: .2s ease-in;
+      @include media('<huge') {
+        font-size: 1.65rem;
+      }
+      @include media('<large') {
+        font-size: 1.3rem;
+      }
+      @include media('<medium') {
+        font-size: 1.15rem;
+      }
+      @include media('<small') {
+        font-size: 1rem;
+      }
     }
-  }
-  .right-wrapper {
   }
 }

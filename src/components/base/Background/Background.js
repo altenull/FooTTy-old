@@ -1,11 +1,16 @@
 // @flow
 import React from 'react';
+import type { Node } from 'react';
 import styles from './Background.scss';
 import classNames from 'classnames/bind';
 
 const cx = classNames.bind(styles);
 
-const Background = ({ children }) => {
+type Props = {
+  children: Node
+};
+
+const Background = ({children}: Props) => {
   return (
     <div className={cx('background')}>
       <div className={cx('image')}>
@@ -15,6 +20,6 @@ const Background = ({ children }) => {
       </div>
     </div>
   );
-};
+}
 
 export default Background;

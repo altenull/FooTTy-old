@@ -1,0 +1,44 @@
+@import 'utils';
+
+.slide-enter {
+  animation-duration: .5s;
+  animation-delay: 2.2s;
+  animation-fill-mode: both;
+  animation-timing-function: ease-in-out;
+  animation-name: slideInUp;
+}
+
+.footer {
+  padding: 0.5rem 0;
+  span {
+    color: $oc-gray-7;
+    font-weight: 500;
+    user-select: none;
+    transition: .2s ease-in;
+    @include media('<medium') {
+      font-size: 0.8rem;
+    }
+    @include media('<small') {
+      font-size: 0.6rem;
+    }
+  }
+  .social-links {
+    display: flex;
+    justify-content: center;
+    a {
+      color: $oc-gray-7;
+      font-size: 2rem;
+      margin: 0.2rem 0.8rem;
+      @include media('<medium') {
+        font-size: 1.5rem;
+      }
+      @include media('<small') {
+        font-size: 1.3rem;
+      }
+      &:hover {
+        color: $oc-gray-6;
+        cursor: pointer;
+      }
+    }
+  }
+}

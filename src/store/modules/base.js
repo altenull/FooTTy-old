@@ -3,32 +3,32 @@ import { createAction, handleActions } from 'redux-actions';
 import { Record, type Map } from 'immutable';
 
 // action types
+const START_LANDING = 'base/START_LANDING';
 const CHANGE_CURRENT_PAGE = 'base/CHANGE_CURRENT_PAGE';
-const START_REVEAL_TEXT = 'base/START_REVEAL_TEXT';
 
 export type BaseActionCreators = {
-  changeCurrentPage(currentPage: string): any,
-  startRevealText(): any
+  startLanding(): any,
+  changeCurrentPage(currentPage: string): any
 };
 
 export const actionCreators = {
-  changeCurrentPage: createAction(CHANGE_CURRENT_PAGE),
-  startRevealText: createAction(START_REVEAL_TEXT)
+  startLanding: createAction(START_LANDING),
+  changeCurrentPage: createAction(CHANGE_CURRENT_PAGE)
 };
 
 export type Base = {
-  currentPage: string,
-  revealText: boolean
-}
+  landing: boolean,
+  currentPage: string
+};
 
 const BaseRecord = Record({
-  currentPage: 'home',
-  revealText: false
+  landing: false,
+  currentPage: 'home'
 });
 
 const initialState: Map<string, *> = BaseRecord();
 
 export default handleActions({
-  [CHANGE_CURRENT_PAGE]: (state, { payload: currentPage }) => state.set('currentPage', currentPage),
-  [START_REVEAL_TEXT]: state => state.set('revealText', true)
+  [START_LANDING]: state => state.set('landing', true),
+  [CHANGE_CURRENT_PAGE]: (state, { payload: currentPage }) => state.set('currentPage', currentPage)
 }, initialState);

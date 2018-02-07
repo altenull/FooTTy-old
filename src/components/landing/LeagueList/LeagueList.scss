@@ -1,0 +1,92 @@
+@import 'utils';
+
+@mixin fade-enter($duration, $delay) {
+  animation-duration: $duration;
+  animation-delay: $delay;
+  animation-fill-mode: both;
+  animation-timing-function: ease-in-out;
+  animation-name: fadeInRight;
+}
+
+.fade-enter1 {
+  @include fade-enter(.8s, 1.2s);
+}
+
+.fade-enter2 {
+  @include fade-enter(.65s, 1.45s);
+}
+
+.fade-enter3 {
+  @include fade-enter(.5s, 1.7s);
+}
+
+.league-list {
+  display: flex;
+  flex-direction: column;
+  @include media('<medium') {
+    flex-direction: row;
+    justify-content: space-around;
+  }
+  .league {
+    display: flex;
+    align-items: center;
+    margin: 1rem 0;
+    img {
+      width: 10rem;
+      height: 10rem;
+      opacity: 0.5;
+      transition: .2s ease-in;
+      user-select: none;
+      @include media('<huge') {
+        width: 8rem;
+        height: 8rem;
+      }
+      @include media('<large') {
+        width: 7rem;
+        height: 7rem;
+      }
+      @include media('<medium') {
+        width: 6.5rem;
+        height: 6.5rem;
+      }
+      @include media('<small') {
+        width: 5rem;
+        height: 5rem;
+      }
+    }
+    span {
+      color: $oc-gray-7;
+      font-size: 2rem;
+      font-weight: 700;
+      transition: .2s ease-in;
+      user-select: none;
+      @include media('<huge') {
+        font-size: 1.65rem;
+      }
+      @include media('<large') {
+        font-size: 1.3rem;
+      }
+      @include media('<medium') {
+        display: none;
+      }
+    }
+    &:hover {
+      cursor: pointer;
+      .premierleague {
+        content: url('static/images/PremierLeague_Badge.png');
+      }
+      .laliga {
+        content: url('static/images/LaLiga_Badge.png');
+      }
+      .bundesliga {
+        content: url('static/images/BundesLiga_Badge.png');
+      }
+      img {
+        transform: scale(1.05);
+      }
+      span {
+        color: $oc-gray-6;
+      }
+    }
+  }
+}

@@ -5,21 +5,19 @@ import './PageTemplate.scss';
 import Background from 'components/base/Background';
 
 type Props = {
-  header: Node,
   children: Node
 }
 
-const PageTemplate = ({header, children}: Props) => {
+const PageTemplate = ({children}: Props) => {
   return (
     <div className="page-template">
-      <Background>
-        {header}
+        <Background>
         <main>
           {children}
         </main>
       </Background>
     </div>
   );
-};
+}
 
 export default PageTemplate;

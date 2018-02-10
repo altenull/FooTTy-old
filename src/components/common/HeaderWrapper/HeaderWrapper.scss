@@ -1,0 +1,12 @@
+@import 'utils';
+
+.container {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  .header-wrapper {
+    display: flex;
+    align-items: center;
+  }
+}

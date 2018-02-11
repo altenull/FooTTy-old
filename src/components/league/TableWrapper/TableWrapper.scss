@@ -1,0 +1,30 @@
+@import 'utils';
+
+.table-wrapper {
+  position: relative;
+  background: rgba(70, 70, 70, 0.25);
+  padding: 1rem 1rem 0.5rem 1rem;
+  border-radius: 3px;
+  .table-header {
+    display: flex;
+    color: $oc-gray-7;
+    padding-bottom: 1rem;
+    .spacer-flex {
+      flex: 40%;
+    }
+    .spacer-width {
+      width: 100%;
+    }
+    .numeric-data {
+      flex: 20%;
+      text-align: center;
+    }
+  }
+  .scroll {
+    width: 41.25rem;
+    height: 60vh;
+    @include media('<small') {
+      height: 120px;
+    }
+  }
+}

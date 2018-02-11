@@ -1,0 +1,27 @@
+@import 'utils';
+
+.slide-enter {
+  animation-duration: .3s;
+  // animation-delay: 0s;
+  animation-fill-mode: both;
+  animation-timing-function: ease-in-out;
+  animation-name: slideInDown;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  padding-left: 5rem;
+  padding-top: 0.5rem;
+  img {
+    width: 5rem;
+    height: 5rem;
+    user-select: none;
+  }
+  h1 {
+    font-size: 2.4rem;
+    font-weight: 700;
+    color: $oc-gray-3;
+    user-select: none;
+  }
+}

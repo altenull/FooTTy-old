@@ -1,0 +1,7 @@
+@import 'utils';
+
+.positioner {
+  position: absolute;
+  left: calc(50% - 25px);
+  top: 50%;
+}

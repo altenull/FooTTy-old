@@ -1,5 +1,13 @@
 @import 'utils';
 
+.fade-enter {
+  animation-duration: .5s;
+  animation-delay: .2s;
+  animation-fill-mode: both;
+  animation-timing-function: ease-in-out;
+  animation-name: fadeIn;
+}
+
 .table-wrapper {
   position: relative;
   background: rgba(70, 70, 70, 0.25);
@@ -9,6 +17,7 @@
     display: flex;
     color: $oc-gray-7;
     padding-bottom: 1rem;
+    font-weight: 700;
     .spacer-flex {
       flex: 40%;
     }

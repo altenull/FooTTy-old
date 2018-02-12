@@ -12,7 +12,7 @@ type Props = {
 
 const TableWrapper = ({children}: Props) => {
   return (
-    <div className={cx('table-wrapper')}>
+    <div className={cx('table-wrapper', 'fade-enter')}>
       <div className={cx('table-header')}>
         <div className={cx('spacer-flex')}></div>
         <div className={cx('spacer-width')}></div>

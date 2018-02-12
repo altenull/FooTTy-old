@@ -3,7 +3,7 @@ import React from 'react';
 import styles from './Footer.scss';
 import classNames from 'classnames/bind';
 import FooterWrapper from 'components/common/FooterWrapper';
-import { FaArrowCircleLeft } from 'react-icons/lib/fa';
+import { FaArrowCircleOLeft } from 'react-icons/lib/fa';
 
 const cx = classNames.bind(styles);
 
@@ -16,7 +16,7 @@ const Footer = ({onClick}: Props) => {
     <FooterWrapper>
       <div className={cx('footer', 'slide-enter')}>
         <div className={cx('navigation')} onClick={onClick}>
-          <FaArrowCircleLeft />
+          <FaArrowCircleOLeft/>
         </div>
       </div>
     </FooterWrapper>

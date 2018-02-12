@@ -2,7 +2,6 @@
 
 .slide-enter {
   animation-duration: .3s;
-  // animation-delay: 2.2s;
   animation-fill-mode: both;
   animation-timing-function: ease-in-out;
   animation-name: slideInUp;
@@ -12,6 +11,7 @@
   .navigation {
     color: $oc-gray-7;
     font-size: 3rem;
+    margin-bottom: 0.2rem;
     &:hover {
       color: $oc-gray-6;
       cursor: pointer;

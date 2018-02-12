@@ -5,6 +5,7 @@ import type { State } from 'store';
 import PageTemplate from 'components/base/PageTemplate';
 import LandingTemplateContainer from 'containers/landing/LandingTemplateContainer';
 import LeagueTemplateContainer from 'containers/league/LeagueTemplateContainer';
+import TeamTemplateContainer from 'containers/team/TeamTemplateContainer';
 
 type Props = {
   currentPage: string
@@ -17,6 +18,8 @@ class App extends Component<Props> {
       return <LandingTemplateContainer />;
     case 'league':
       return <LeagueTemplateContainer />;
+    case 'team':
+      return <TeamTemplateContainer />;
     default:
       return null;
     }

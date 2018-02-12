@@ -2,26 +2,40 @@
 
 .slide-enter {
   animation-duration: .3s;
-  // animation-delay: 0s;
   animation-fill-mode: both;
   animation-timing-function: ease-in-out;
   animation-name: slideInDown;
 }
 
 .header {
+  width: 100%;
   display: flex;
   align-items: center;
-  padding-left: 5rem;
-  padding-top: 0.5rem;
-  img {
-    width: 5rem;
-    height: 5rem;
-    user-select: none;
+  padding: .5rem 5rem 0 5rem;
+  .logo {
+    display: flex;
+    align-items: center;
+    img {
+      width: 5rem;
+      height: 5rem;
+      user-select: none;
+    }
+    h1 {
+      font-size: 2.4rem;
+      font-weight: 700;
+      color: $oc-gray-5;
+      user-select: none;
+      padding-left: 0.5rem;
+    }
   }
-  h1 {
-    font-size: 2.4rem;
-    font-weight: 700;
-    color: $oc-gray-3;
-    user-select: none;
+  .spacer {
+    flex: 1;
+  }
+  .flag {
+    opacity: .7;
+    img {
+      width: 4rem;
+      height: 4rem;
+    }
   }
 }

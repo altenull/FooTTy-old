@@ -11,7 +11,7 @@ type Props = {
 const PageTemplate = ({children}: Props) => {
   return (
     <div className="page-template">
-        <Background>
+      <Background>
         <main>
           {children}
         </main>

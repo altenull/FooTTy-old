@@ -16,7 +16,7 @@ const HeaderWrapper = ({children}: Props) => {
       <div className={cx('header-wrapper')}>
         {children}
       </div>
-  </div>
+    </div>
   );
 }
 

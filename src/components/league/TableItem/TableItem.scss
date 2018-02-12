@@ -7,23 +7,40 @@
   border-bottom: 1px solid $oc-gray-8;
   box-sizing: border-box;
   &:hover {
-    background: $oc-gray-8;
     cursor: pointer;
+    .numeric-data {
+      color: $oc-gray-4;
+    }
+    .team-badge {
+      img {
+        transform: scale(1.2);
+      }
+    }
+    .team-name {
+      color: $oc-gray-4;
+    }
   }
   .numeric-data {
     flex: 20%;
     text-align: center;
     color: $oc-gray-6;
+    transition: .1s ease-in;
   }
   .team-badge {
     img {
       width: 2.8rem;
       height: 2.8rem;
+      margin: .3rem 0;
+      transition: .1s ease-in;
     }
   }
   .team-name {
     width: 100%;
     color: $oc-gray-6;
     padding-left: 0.5rem;
+    transition: .1s ease-in;
+  }
+  .points {
+    color: $oc-orange-4;
   }
 }

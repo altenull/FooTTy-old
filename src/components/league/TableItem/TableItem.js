@@ -6,7 +6,10 @@ import classNames from 'classnames/bind';
 const cx = classNames.bind(styles);
 
 type Props = {
+  onClick(): void,
+  teamid: string,
   rank: number,
+  badge: string,
   name: string,
   played: number,
   win: number,
@@ -19,7 +22,10 @@ type Props = {
 }
 
 const TableItem = ({
+  onClick,
+  teamid,
   rank,
+  badge,
   name,
   played,
   win,
@@ -30,15 +36,13 @@ const TableItem = ({
   goalsDifference,
   points
 }: Props) => {
-  const imgUrl = require('static/images/PremierLeague_Badge.png');
-
   return (
-    <div className={cx('table-item')}>
+    <div className={cx('table-item')} onClick={() => onClick(teamid)}>
       <div className={cx('numeric-data', 'rank')}>
         {rank}
       </div>
       <div className={cx('team-badge')}>
-        <img src={imgUrl} alt='sample' />
+        <img src={`http://${badge}`} alt={name} />
       </div>
       <div className={cx('team-name')}>
         {name}

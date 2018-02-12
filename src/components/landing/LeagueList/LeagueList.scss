@@ -73,13 +73,13 @@
     &:hover {
       cursor: pointer;
       .premierleague {
-        content: url('static/images/PremierLeague_Badge.png');
+        content: url('static/images/PL_badge.png');
       }
       .laliga {
-        content: url('static/images/LaLiga_Badge.png');
+        content: url('static/images/LL_badge.png');
       }
       .bundesliga {
-        content: url('static/images/BundesLiga_Badge.png');
+        content: url('static/images/BL_badge.png');
       }
       img {
         transform: scale(1.05);

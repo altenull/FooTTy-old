@@ -27,13 +27,15 @@ export const actionCreators = {
 export type League = {
   currentLeague: string,
   table: ?List,
-  teams: ?List
+  teams: ?List,
+  isLoaded: boolean
 };
 
 const LeagueRecord = Record({
   currentLeague: '',
   table: null,
-  teams: null
+  teams: null,
+  isLoaded: false
 });
 
 const initialState: Map<string, *> = LeagueRecord();
@@ -44,7 +46,8 @@ export default handleActions({
     type: GET_LEAGUE_TABLE,
     onSuccess: (state, { payload: { data } }) => {
       const { table } = data;
-      return state.set('table', fromJS(table));
+      return state.set('table', fromJS(table))
+        .set('isLoaded', true);
     }
   }),
   ...pender({

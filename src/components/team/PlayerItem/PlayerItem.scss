@@ -1,0 +1,82 @@
+@import 'utils';
+
+.player-item {
+  display: flex;
+  width: 45%;
+  padding-bottom: .6rem;
+  &:hover {
+    cursor: pointer;
+    .thumb {
+      img {
+        transform: scale(1.2);
+      }
+    }
+    .profile {
+      .name {
+        color: $oc-gray-3;
+      }
+      .country {
+        color: $oc-gray-5;
+      }
+    }
+  }
+  .thumb {
+    padding-right: .6rem;
+    img {
+      width: 4rem;
+      height: 4rem;
+      transition: .1s ease-in;
+      @include media('<large') {
+        width: 3.6rem;
+        height: 3.6rem;
+      }
+      @include media('<medium') {
+        width: 3rem;
+        height: 3rem;
+      }
+      @include media('<small') {
+        width: 2.5rem;
+        height: 2.5rem;
+      }
+    }
+    .thumb-img {
+      border-radius: 50%;
+      box-shadow: 0 3px 6px rgba(0, 0, 0, .16), 0 3px 6px rgba(0, 0, 0, .23);
+    }
+    .empty-img {
+      opacity: .75;
+      filter: grayscale(100%);
+    }
+  }
+  .profile {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    transition: .1s ease-in;
+    .name {
+      color: $oc-gray-4;
+      @include media('<large') {
+        font-size: .9rem;
+      }
+      @include media('<medium') {
+        font-size: .7rem;
+      }
+      @include media('<small') {
+        font-size: .6rem;
+      }
+    }
+    .country {
+      color: $oc-gray-6;
+      font-size: .8rem;
+      @include media('<large') {
+        font-size: .7rem;
+      }
+      @include media('<medium') {
+        font-size: .6rem;
+      }
+      @include media('<small') {
+        font-size: .5rem;
+      }
+    }
+  }
+}

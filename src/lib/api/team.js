@@ -1,4 +1,6 @@
 // @flow
 import axios from 'axios';
 
-export const getAllPlayer = (currentTeam: string): Promise<*> => axios.get(`https://www.thesportsdb.com/api/v1/json/1/searchplayers.php?t=${currentTeam}`);
+const apiKey = process.env.REACT_APP_APIKEY;
+
+export const getAllPlayer = (currentTeam: string): Promise<*> => axios.get(`https://www.thesportsdb.com/api/v1/json/${apiKey}/searchplayers.php?t=${currentTeam}`);

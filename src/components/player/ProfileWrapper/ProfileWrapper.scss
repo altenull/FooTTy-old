@@ -1,0 +1,77 @@
+@import 'utils';
+
+.fade-enter {
+  animation-duration: .5s;
+  animation-delay: .2s;
+  animation-fill-mode: both;
+  animation-timing-function: ease-in-out;
+  animation-name: fadeIn;
+}
+
+.profile-wrapper {
+  width: 43.25rem;
+  background: rgba(70, 70, 70, .25);
+  padding: 1rem 1rem 0 1rem;
+  border-radius: 3px;
+  display: flex;
+  flex-direction: column;
+  transition: .2s ease-in;
+  @include media('<medium') {
+    width: 80vw;
+  }
+  .thumb {
+    margin: -5rem 0 .5rem 0;
+    .thumb-img {
+      width: 12.5rem;
+      height: 12.5rem;
+      box-shadow: 0 3px 6px rgba(0, 0, 0, .16), 0 3px 6px rgba(0, 0, 0, .23);
+      border-radius: 3px;
+      transition: .2s ease-in;
+      @include media('<large') {
+        width: 11rem;
+        height: 11rem;
+      }
+      @include media('<medium') {
+        width: 9rem;
+        height: 9rem;
+      }
+      @include media('<small') {
+        width: 7rem;
+        height: 7rem;
+      }
+    }
+  }
+  .player-infos {
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 1rem;
+    .info {
+      display: flex;
+      padding: .5rem 0;
+      .info-name {
+        color: $oc-gray-7;
+        font-size: 1.1rem;
+        font-weight: 700;
+        @include media('<large') {
+          font-size: .9rem;
+        }
+        @include media('<medium') {
+          font-size: .75rem;
+        }
+      }
+      .spacer {
+        flex: 1;
+      }
+      .info-content {
+        color: $oc-gray-6;
+        font-size: 1.1rem;
+        @include media('<large') {
+          font-size: .9rem;
+        }
+        @include media('<medium') {
+          font-size: .75rem;
+        }
+      }
+    }
+  }
+}

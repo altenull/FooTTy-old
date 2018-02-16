@@ -8,12 +8,18 @@ import LeagueTemplateContainer from 'containers/league/LeagueTemplateContainer';
 import TeamTemplateContainer from 'containers/team/TeamTemplateContainer';
 import PlayerTemplateContainer from 'containers/player/PlayerTemplateContainer';
 import { Helmet } from 'react-helmet';
+import ReactGA from 'react-ga';
 
 type Props = {
   currentPage: string
 };
 
 class App extends Component<Props> {
+  componentDidMount() {
+    ReactGA.set({ page: window.location.pathname + window.location.search });
+    ReactGA.pageview(window.location.pathname + window.location.search);
+  }
+
   renderTemplate = (): ?Node => {
     const { currentPage } = this.props;
 

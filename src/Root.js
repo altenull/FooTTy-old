@@ -4,6 +4,9 @@ import { Provider } from 'react-redux';
 import { BrowserRouter } from 'react-router-dom';
 import App from './App';
 import store from './store';
+import ReactGA from 'react-ga';
+
+ReactGA.initialize('UA-113144364-2');
 
 const Root = () => (
   <Provider store={store}>

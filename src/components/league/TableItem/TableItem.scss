@@ -19,28 +19,63 @@
     .team-name {
       color: $oc-gray-4;
     }
+    .points {
+      color: $oc-orange-6;
+    }
   }
   .numeric-data {
     flex: 20%;
     text-align: center;
     color: $oc-gray-6;
     transition: .1s ease-in;
+    @include media('<medium') {
+      font-size: .8rem;
+    }
+    @include media('<small') {
+      font-size: .65rem;
+    }
   }
   .team-badge {
     img {
-      width: 2.8rem;
-      height: 2.8rem;
+      width: 2rem;
+      height: 2rem;
       margin: .3rem 0;
       transition: .1s ease-in;
+      @include media('<medium') {
+        width: 1.6rem;
+        height: 1.6rem;
+      }
     }
   }
   .team-name {
     width: 100%;
     color: $oc-gray-6;
-    padding-left: 0.5rem;
+    padding-left: .5rem;
     transition: .1s ease-in;
+    @include media('<medium') {
+      font-size: .8rem;
+    }
+    @include media('<small') {
+      font-size: .65rem;
+    }
+  }
+  .goals-for {
+    @include media('<small') {
+      display: none;
+    }
+  }
+  .goals-against {
+    @include media('<small') {
+      display: none;
+    }
   }
   .points {
     color: $oc-orange-4;
+    @include media('<medium') {
+      font-size: .8rem;
+    }
+    @include media('<small') {
+      font-size: .65rem;
+    }
   }
 }

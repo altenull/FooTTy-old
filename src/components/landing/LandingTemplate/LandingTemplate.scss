@@ -1,5 +1,11 @@
 @import 'utils';
 
+.header-style {
+  user-select: none;
+  transition: .2s ease-in;
+  font-family: 'Heebo';
+}
+
 .landing-template {
   display: flex;
   justify-content: space-between;
@@ -13,13 +19,12 @@
     flex-direction: column;
     justify-content: center;
     h1 {
+      @extend .header-style;
       color: $oc-gray-6;
       font-size: 5.5rem;
       font-weight: 800;
-      user-select: none;
-      margin: 0;
+      margin: 0 0 -1.3rem 0;
       padding: 0;
-      transition: .2s ease-in;
       @include media('<huge') {
         font-size: 4.5rem;
       }
@@ -28,19 +33,19 @@
       }
       @include media('<medium') {
         font-size: 3rem;
+        margin: 0 0 -.8rem 0;
       }
       @include media('<small') {
         font-size: 2.5rem;
       }
     }
     h2 {
+      @extend .header-style;
       color: $oc-gray-6;
       font-size: 3.3rem;
       font-weight: 800;
-      user-select: none;
       margin: 0;
       padding: 0;
-      transition: .2s ease-in;
       @include media('<huge') {
         font-size: 2.8rem;
       }
@@ -55,11 +60,10 @@
       }
     }
     h3 {
+      @extend .header-style;
       color: $oc-gray-7;
-      font-size: 2rem;
+      font-size: 1.8rem;
       font-weight: 700;
-      user-select: none;
-      transition: .2s ease-in;
       @include media('<huge') {
         font-size: 1.65rem;
       }

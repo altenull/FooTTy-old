@@ -9,31 +9,58 @@
 }
 
 .table-wrapper {
-  position: relative;
-  background: rgba(70, 70, 70, 0.25);
-  padding: 1rem 1rem 0.5rem 1rem;
+  background: rgba(70, 70, 70, .25);
+  padding: 1rem 1rem .5rem 1rem;
   border-radius: 3px;
+  height: calc(100vh - 13rem);
   .table-header {
     display: flex;
+    align-items: center;
     color: $oc-gray-7;
-    padding-bottom: 1rem;
+    margin-bottom: 1rem;
     font-weight: 700;
-    .spacer-flex {
-      flex: 40%;
-    }
-    .spacer-width {
+    .season {
       width: 100%;
+      font-size: 1.2rem;
+      @include media('<medium') {
+        font-size: .9rem;
+      }
+      @include media('<small') {
+        font-size: .75rem;
+      }
+    }
+    .spacer-flex {
+      flex: 35%;
     }
     .numeric-data {
       flex: 20%;
+      font-size: .9rem;
       text-align: center;
+      @include media('<medium') {
+        font-size: .8rem;
+      }
+      @include media('<small') {
+        flex: 19%;
+        font-size: .65rem;
+      }
+    }
+    .goals-for {
+      @include media('<small') {
+        display: none;
+      }
+    }
+    .goals-against {
+      @include media('<small') {
+        display: none;
+      }
     }
   }
   .scroll {
     width: 41.25rem;
-    height: 60vh;
-    @include media('<small') {
-      height: 120px;
+    height: 90%;
+    transition: .2s ease-in;
+    @include media('<medium') {
+      width: 80vw;
     }
   }
 }

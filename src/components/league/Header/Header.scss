@@ -12,6 +12,11 @@
   display: flex;
   align-items: center;
   padding: .5rem 5rem 0 5rem;
+  transition: .2s ease-in;
+  @include media('<medium') {
+    width: 90vw;
+    padding: .5rem 0 0 0;
+  }
   .logo {
     display: flex;
     align-items: center;
@@ -19,13 +24,37 @@
       width: 5rem;
       height: 5rem;
       user-select: none;
+      transition: .2s ease-in;
+      @include media('<large') {
+        width: 4rem;
+        height: 4rem;
+      }
+      @include media('<medium') {
+        width: 3.4rem;
+        height: 3.4rem;
+      }
+      @include media('<small') {
+        width: 3.2rem;
+        height: 3.2rem;
+      }
     }
     h1 {
       font-size: 2.4rem;
       font-weight: 700;
       color: $oc-gray-5;
       user-select: none;
-      padding-left: 0.5rem;
+      padding-left: .5rem;
+      transition: .2s ease-in;
+      @include media('<large') {
+        font-size: 2rem;
+      }
+      @include media('<medium') {
+        font-size: 1.6rem;
+        padding-left: .3rem;
+      }
+      @include media('<small') {
+        font-size: 1.3rem;
+      }
     }
   }
   .spacer {
@@ -33,9 +62,23 @@
   }
   .flag {
     opacity: .7;
+    user-select: none;
     img {
       width: 4rem;
       height: 4rem;
+      transition: .2s ease-in;
+      @include media('<large') {
+        width: 3.2rem;
+        height: 3.2rem;
+      }
+      @include media('<medium') {
+        width: 2.6rem;
+        height: 2.6rem;
+      }
+      @include media('<small') {
+        width: 2.3rem;
+        height: 2.3rem;
+      }
     }
   }
 }

@@ -34,7 +34,7 @@
     img {
       width: 10rem;
       height: 10rem;
-      opacity: 0.5;
+      opacity: .5;
       transition: .2s ease-in;
       user-select: none;
       @include media('<huge') {
@@ -82,7 +82,7 @@
         content: url('static/images/BL_badge.png');
       }
       img {
-        transform: scale(1.05);
+        transform: scale(1.1);
       }
       span {
         color: $oc-gray-6;

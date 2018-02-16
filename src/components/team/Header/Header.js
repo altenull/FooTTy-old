@@ -22,7 +22,7 @@ const Header = ({badge, teamName, webSite, facebook, twitter, instagram, youtube
     <HeaderWrapper>
       <div className={cx('header', 'slide-enter')}>
         <div className={cx('logo')}>
-          <img src={`http://${badge}`} alt={teamName} />
+          <img src={`https://${badge}`} alt={teamName} />
           <h1>
             {teamName}
           </h1>

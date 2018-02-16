@@ -19,8 +19,8 @@ const PlayerItem = ({onClick, idPlayer, thumbImgURL, name, country, emptyImgURL}
     <div className={cx('player-item')} onClick={() => onClick(idPlayer)}>
       <div className={cx('thumb')}>
         { thumbImgURL
-          ? <img src={`http://${thumbImgURL}`} alt={name} className={cx('thumb-img')}/>
-          : <img src={`http://${emptyImgURL}`} alt={name} className={cx('empty-img')}/>
+          ? <img src={`https://${thumbImgURL}`} alt={name} className={cx('thumb-img')}/>
+          : <img src={`https://${emptyImgURL}`} alt={name} className={cx('empty-img')}/>
         }
       </div>
       <div className={cx('profile')}>

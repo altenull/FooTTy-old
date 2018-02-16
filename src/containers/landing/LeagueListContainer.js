@@ -14,6 +14,7 @@ class LeagueListContainer extends Component {
     const leagueId = leagueInfo.find(c => c.alias === leagueAlias).id;
 
     try {
+      await LeagueActions.getLeagueDetails(leagueAlias);
       const latestSeason = await this.getLatestSeason(leagueAlias);
       await LeagueActions.getLeagueTable({ leagueId, latestSeason });
     } catch (e) {
@@ -26,6 +27,7 @@ class LeagueListContainer extends Component {
       const response = await LeagueAPI.getLatestSeason(leagueInfo.find(c => c.alias === leagueAlias).id);
       const seasons = response.data.leagues;
       const latestSeason = seasons[seasons.length - 1].strSeason; // last child is latest season
+      LeagueActions.setLatestSeason(latestSeason);
       return latestSeason;
     } catch (e) {
       console.log(e);
@@ -33,7 +35,6 @@ class LeagueListContainer extends Component {
   }
 
   render() {
-    console.log('<landing> LeagueListContainer 랜더링');
     const { handleClick } = this;
 
     return (

@@ -7,15 +7,20 @@ import { Scrollbars } from 'react-custom-scrollbars';
 const cx = classNames.bind(styles);
 
 type Props = {
+  latestSeason: string,
   children: Node
 }
 
-const TableWrapper = ({children}: Props) => {
+const TableWrapper = ({latestSeason, children}: Props) => {
+  const prevYear = latestSeason.substring(0, 2);
+  const nextYear = latestSeason.substring(2);
   return (
     <div className={cx('table-wrapper', 'fade-enter')}>
       <div className={cx('table-header')}>
+        <div className={cx('season')}>
+          {`${prevYear}/${nextYear} Season`}
+        </div>
         <div className={cx('spacer-flex')}></div>
-        <div className={cx('spacer-width')}></div>
         <div className={cx('numeric-data')} title='played'>
           Pl
         </div>
@@ -28,10 +33,10 @@ const TableWrapper = ({children}: Props) => {
         <div className={cx('numeric-data')} title='loss'>
           L
         </div>
-        <div className={cx('numeric-data')} title='goals for'>
+        <div className={cx('numeric-data', 'goals-for')} title='goals for'>
           GF
         </div>
-        <div className={cx('numeric-data')} title='goals against'>
+        <div className={cx('numeric-data', 'goals-against')} title='goals against'>
           GA
         </div>
         <div className={cx('numeric-data')} title='goals difference'>
@@ -46,9 +51,6 @@ const TableWrapper = ({children}: Props) => {
           autoHide
           autoHideTimeout={1000}
           autoHideDuration={200}
-          // autoHeight
-          // autoHeightMin={300}
-          // autoHeightMax={480}
         >
           {children}
         </Scrollbars>

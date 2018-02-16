@@ -8,12 +8,14 @@ import * as LeagueAPI from 'lib/api/league';
 const GET_LEAGUE_TABLE = 'league/GET_LEAGUE_TABLE';
 const SET_CURRENT_LEAGUE = 'league/SET_CURRENT_LEAGUE';
 const GET_LEAGUE_DETAILS = 'league/GET_LEAGUE_DETAILS';
+const SET_LATEST_SEASON = 'league/SET_LATEST_SEASON';
 const INITIALIZE_LEAGUE = 'league/INITIALIZE_LEAGUE';
 
 export type LeagueActionCreators = {
   getLeagueTable(payload: LeagueAPI.getLeagueTablePayload): any,
   setCurrentLeague(currentLeague: string): any,
   getLeagueDetails(leagueAlias: string): any,
+  setLatestSeason(latestSeason: string): any,
   initializeLeague(): any
 };
 
@@ -21,11 +23,13 @@ export const actionCreators = {
   getLeagueTable: createAction(GET_LEAGUE_TABLE, LeagueAPI.getLeagueTable),
   setCurrentLeague: createAction(SET_CURRENT_LEAGUE),
   getLeagueDetails: createAction(GET_LEAGUE_DETAILS, LeagueAPI.getLeagueDetails),
+  setLatestSeason: createAction(SET_LATEST_SEASON),
   initializeLeague: createAction(INITIALIZE_LEAGUE)
 };
 
 export type League = {
   currentLeague: string,
+  latestSeason: string,
   table: ?List,
   teams: ?List,
   isLoaded: boolean
@@ -33,6 +37,7 @@ export type League = {
 
 const LeagueRecord = Record({
   currentLeague: '',
+  latestSeason: '',
   table: null,
   teams: null,
   isLoaded: false
@@ -57,5 +62,6 @@ export default handleActions({
       return state.set('teams', fromJS(teams));
     }
   }),
+  [SET_LATEST_SEASON]: (state, { payload: latestSeason }) => state.set('latestSeason', latestSeason),
   [INITIALIZE_LEAGUE]: state => initialState
 }, initialState);

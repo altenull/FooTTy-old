@@ -1,16 +1,26 @@
 // @flow
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
+import type { State } from 'store';
 import { BaseActions } from 'store/actionCreators';
 import Footer from 'components/league/Footer';
 
-class FooterContainer extends Component {
+type Props = {
+  isLoaded: boolean
+}
+
+class FooterContainer extends Component<Props> {
   handleClick = () => {
     BaseActions.changeCurrentPage('home');
   }
 
   render() {
+    const { isLoaded } = this.props;
     const { handleClick } = this;
+
+    if (!isLoaded) {
+      return null;
+    }
 
     return (
       <Footer
@@ -21,6 +31,8 @@ class FooterContainer extends Component {
 }
 
 export default connect(
-  () => ({}),
+  ({ league }: State) => ({
+    isLoaded: league.isLoaded
+  }),
   () => ({})
 )(FooterContainer);

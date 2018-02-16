@@ -23,24 +23,6 @@
       width: 5rem;
       height: 3rem;
     }
-    img {
-      width: 5rem;
-      height: 5rem;
-      user-select: none;
-      transition: .2s ease-in;
-      @include media('<large') {
-        width: 4rem;
-        height: 4rem;
-      }
-      @include media('<medium') {
-        width: 3.4rem;
-        height: 3.4rem;
-      }
-      @include media('<small') {
-        width: 3.2rem;
-        height: 3.2rem;
-      }
-    }
     h1 {
       font-size: 2.4rem;
       font-weight: 700;

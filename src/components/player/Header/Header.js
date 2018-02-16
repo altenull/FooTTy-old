@@ -21,7 +21,6 @@ const Header = ({country, playerName, webSite, facebook, twitter, instagram}: Pr
     <HeaderWrapper>
       <div className={cx('header', 'slide-enter')}>
         <div className={cx('logo')}>
-          {/* <img src={`http://${badge}`} alt={playerName} /> */}
           <h1>
             {playerName}
           </h1>

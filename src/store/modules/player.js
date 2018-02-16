@@ -1,7 +1,6 @@
 // @flow
 import { createAction, handleActions } from 'redux-actions';
-import { Record, List, fromJS, type Map } from 'immutable';
-import { pender } from 'redux-pender';
+import { Record, type Map } from 'immutable';
 
 // action types
 const SET_CURRENT_PLAYERID = 'team/SET_CURRENT_PLAYERID';

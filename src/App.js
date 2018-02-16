@@ -7,6 +7,7 @@ import LandingTemplateContainer from 'containers/landing/LandingTemplateContaine
 import LeagueTemplateContainer from 'containers/league/LeagueTemplateContainer';
 import TeamTemplateContainer from 'containers/team/TeamTemplateContainer';
 import PlayerTemplateContainer from 'containers/player/PlayerTemplateContainer';
+import { Helmet } from 'react-helmet';
 
 type Props = {
   currentPage: string
@@ -34,9 +35,16 @@ class App extends Component<Props> {
     const { renderTemplate } = this;
 
     return (
-      <PageTemplate>
-        {renderTemplate()}
-      </PageTemplate>
+      <div>
+        <Helmet>
+          <title>Footty - a Football Terminal</title>
+          <meta name="keywords" content="Footty, Football, Terminal, League Table, Primier League, La Liga, Bundesliga, altenull"/>
+          <meta name="description" content="Footty is a football information service. You can check real time standings of three major football leagues in Europe, Including team and player information."/>
+        </Helmet>
+        <PageTemplate>
+          {renderTemplate()}
+        </PageTemplate>
+      </div>
     );
   }
 }

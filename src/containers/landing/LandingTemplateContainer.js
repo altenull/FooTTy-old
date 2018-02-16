@@ -1,14 +1,17 @@
 // @flow
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
-import { BaseActions } from 'store/actionCreators';
+import { BaseActions, LeagueActions, TeamActions, PlayerActions } from 'store/actionCreators';
 import LeagueListContainer from 'containers/landing/LeagueListContainer';
 import FooterContainer from 'containers/landing/FooterContainer';
 import LandingTemplate from 'components/landing/LandingTemplate';
 
-class LandingTemplateContainer extends Component<Props> {
+class LandingTemplateContainer extends Component {
   componentDidMount() {
     BaseActions.initializeBaseState();
+    LeagueActions.initializeLeague();
+    TeamActions.initializeTeam();
+    PlayerActions.initializePlayer();
   }
 
   render() {

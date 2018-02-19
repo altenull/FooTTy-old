@@ -2,7 +2,7 @@
 
 > This service is now available at https://footty.kr/
 
-<center><img src="https://footty.kr/ogimage.png" width="650" height="300"></center>
+<p align="center"><img src="https://footty.kr/ogimage.png" width="650" height="300"></p>
 
 ## About
 
@@ -12,9 +12,9 @@ You can check **real time standings** of three major football leagues in Europe,
 Data used in this service rely on [TheSportsDB](https://www.thesportsdb.com/)
 
 #### Including Football Leagues(current)
- - Primier League (United Kingdom)
- - La Liga (Spain)
- - Bundesliga (Germany)
+ - Primier League :uk:
+ - La Liga :es:
+ - Bundesliga :de:
 
 ## Stack
 

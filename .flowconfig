@@ -5,6 +5,7 @@
 ./src
 
 [libs]
+<PROJECT_ROOT>/flow-typed
 
 [lints]
 
@@ -13,5 +14,6 @@ module.name_mapper='^\(.*\)$' -> '<PROJECT_ROOT>/src/\1'
 module.file_ext=.scss
 module.file_ext=.js
 module.name_mapper.extension='scss' -> 'empty/object'
+module.system=haste
 
 [strict]

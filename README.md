@@ -27,11 +27,11 @@ You can check **real time standings** of three major football leagues in Europe,
 - CSS module & Sass
 - axios
 
-#### Firebase
+### Firebase
 
 - Hosting
 
-#### AWS
+### AWS
 
 - Route53
 

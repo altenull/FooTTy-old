@@ -5,8 +5,7 @@ export const leagueInfo = [
     name: 'Premier League',
     fullname: 'English Premier League',
     country: 'United Kingdom',
-    badgeImg: 'PL_badge.png',
-    flagImg: 'PL_flag.png'
+    badgeImg: 'PL_badge.png'
   },
   {
     alias: 'LL',
@@ -14,8 +13,7 @@ export const leagueInfo = [
     name: 'La Liga',
     fullname: 'Spanish La Liga',
     country: 'Spain',
-    badgeImg: 'LL_badge.png',
-    flagImg: 'LL_flag.png'
+    badgeImg: 'LL_badge.png'
   },
   {
     alias: 'BL',
@@ -23,7 +21,6 @@ export const leagueInfo = [
     name: 'Bundesliga',
     fullname: 'German Bundesliga',
     country: 'Germany',
-    badgeImg: 'BL_badge.png',
-    flagImg: 'BL_flag.png'
+    badgeImg: 'BL_badge.png'
   }
 ];

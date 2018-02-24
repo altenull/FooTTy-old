@@ -15,9 +15,7 @@ const Header = ({currentLeague}: Props) => {
   const findResult = leagueInfo.find(c => c.alias === currentLeague);
 
   const badgeImgURL = require(`static/images/${findResult.badgeImg}`);
-  const flagImgURL = require(`static/images/${findResult.flagImg}`);
   const leagueName = findResult.name;
-  const flagAlt = findResult.country;
 
   return (
     <HeaderWrapper>
@@ -27,11 +25,6 @@ const Header = ({currentLeague}: Props) => {
           <h1>
             {leagueName}
           </h1>
-        </div>
-        <div className={cx('spacer')}>
-        </div>
-        <div className={cx('flag')}>
-          <img src={flagImgURL} alt={flagAlt} />
         </div>
       </div>
     </HeaderWrapper>

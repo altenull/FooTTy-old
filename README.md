@@ -4,21 +4,20 @@
 
 <p align="center"><img src="https://footty.kr/ogimage.png" width="650" height="300"></p>
 
-## About
+# About
 
 FooTTy is a football information service provided by **SPA(Single Page Application)**.
 You can check **real time standings** of three major football leagues in Europe, Including **team** and **player** information.
 
-Data used in this service rely on [TheSportsDB](https://www.thesportsdb.com/)
-
 #### Including Football Leagues(current)
- - Primier League :uk:
- - La Liga :es:
- - Bundesliga :de:
+ - Primier League (United Kingdom)
+ - La Liga (Spain)
+ - Bundesliga (Germany)
 
-## Stack
+#### Data Providier
+[TheSportsDB](https://www.thesportsdb.com/)
 
-Everything in this project is in JavaScript.
+# Stack
 
 ### Frontend
 
@@ -28,8 +27,13 @@ Everything in this project is in JavaScript.
 - CSS module & Sass
 - axios
 
+#### Firebase
+
+- Hosting
+
 #### AWS
 
-- S3
-- Cloudfront
 - Route53
+
+# License
+MIT @ altenull

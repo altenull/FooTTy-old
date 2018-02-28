@@ -42,7 +42,7 @@ const TableItem = ({
         {rank}
       </div>
       <div className={cx('team-badge')}>
-        <img src={`https://${badge}`} alt={name} />
+        <img src={`${badge}`} alt={name} />
       </div>
       <div className={cx('team-name')}>
         {name}

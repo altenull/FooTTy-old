@@ -21,7 +21,7 @@ const ProfileWrapper = ({thumbImgURL, playerName, position, country, birthDay, t
     <div className={cx('profile-wrapper', 'fade-enter')}>
       { thumbImgURL &&
         <div className={cx('thumb')}>
-          <img src={`https://${thumbImgURL}`} alt={playerName} className={cx('thumb-img')} />
+          <img src={`${thumbImgURL}`} alt={playerName} className={cx('thumb-img')} />
         </div>
       }
       <div className={cx('player-infos')}>

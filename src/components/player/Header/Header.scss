@@ -16,12 +16,15 @@
     width: 90vw;
     padding: .5rem 0 0 0;
   }
+  @include media('<=small') {
+    flex-direction: column;
+  }
   .logo {
     display: flex;
     align-items: center;
-    .flag {
-      width: 5rem;
-      height: 3rem;
+    @include media('<=small') {
+      margin-bottom: .8rem;
+      align-self: flex-start;
     }
     h1 {
       font-size: 2.4rem;
@@ -43,6 +46,9 @@
   }
   .spacer {
     flex: 1;
+    @include media('<=small') {
+      display: none;
+    }
   }
   .social-links {
     display: flex;
@@ -59,11 +65,6 @@
       }
       @include media('<medium') {
         font-size: 1.3rem;
-        margin: 0 .1rem;
-        padding: .2rem;
-      }
-      @include media('<small') {
-        font-size: 1rem;
       }
       &:hover {
         color: $oc-gray-6;

@@ -14,7 +14,7 @@ You can check **real time standings** of three major football leagues in Europe,
  - La Liga (Spain)
  - Bundesliga (Germany)
 
-#### Data Providier
+#### Data Provider
 [TheSportsDB](https://www.thesportsdb.com/)
 
 # Stack

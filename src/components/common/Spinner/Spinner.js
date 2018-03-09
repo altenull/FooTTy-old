@@ -9,7 +9,7 @@ const cx = classNames.bind(styles);
 const Spinner = () => {
   return (
     <div className={cx('positioner')}>
-      <ChasingDots size={50} color='gray' />
+      <ChasingDots size={30} color='gray' />
     </div>
   );
 }

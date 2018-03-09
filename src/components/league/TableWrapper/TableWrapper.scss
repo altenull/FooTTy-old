@@ -13,6 +13,7 @@
   padding: 1rem 1rem .5rem 1rem;
   border-radius: 3px;
   height: calc(100vh - 13rem);
+  max-height: 525px;
   .table-header {
     display: flex;
     align-items: center;
@@ -58,7 +59,7 @@
   .scroll {
     width: 41.25rem;
     height: 90%;
-    transition: .2s ease-in;
+    transition: all .2s ease-in;
     @include media('<medium') {
       width: 80vw;
     }

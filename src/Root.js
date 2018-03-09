@@ -6,7 +6,7 @@ import App from './App';
 import store from './store';
 import ReactGA from 'react-ga';
 
-ReactGA.initialize('UA-113144364-2');
+ReactGA.initialize(process.env.REACT_APP_GA_TRACKING_ID);
 
 const Root = () => (
   <Provider store={store}>

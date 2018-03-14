@@ -2,7 +2,13 @@
 
 > This service is now available at https://footty.kr/
 
-<p align="center"><img src="https://footty.kr/ogimage.png" width="650" height="300"></p>
+<p align="center"><img src="https://s3.ap-northeast-2.amazonaws.com/altenull/github/footty/screen-shot1.png"></p>
+
+<p align="center"><img src="https://s3.ap-northeast-2.amazonaws.com/altenull/github/footty/screen-shot2.png"></p>
+
+<p align="center"><img src="https://s3.ap-northeast-2.amazonaws.com/altenull/github/footty/screen-shot3.png"></p>
+
+<p align="center"><img src="https://s3.ap-northeast-2.amazonaws.com/altenull/github/footty/mobile-screen-shot.png"></p>
 
 # About
 

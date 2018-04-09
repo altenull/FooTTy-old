@@ -9,9 +9,13 @@ type Props = {
   header: Node,
   footer: Node,
   table: Node
-};
+}
 
-const LeagueTemplate = ({header, footer, table}: Props) => {
+const LeagueTemplate = ({
+  header,
+  footer,
+  table
+}: Props) => {
   return (
     <div>
       {header}

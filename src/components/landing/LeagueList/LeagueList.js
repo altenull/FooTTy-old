@@ -9,7 +9,9 @@ type Props = {
   onClick(leagueId: string): void
 };
 
-const LeagueList = ({onClick}: Props) => {
+const LeagueList = ({
+  onClick
+}: Props) => {
   const PLbadgeGrayImgURL = require('static/images/PL_badge_g.png');
   const LLbadgeGrayImgURL = require('static/images/LL_badge_g.png');
   const BLbadgeGrayImgURL = require('static/images/BL_badge_g.png');

@@ -14,13 +14,20 @@ type Props = {
   emptyImgURL: string
 }
 
-const PlayerItem = ({onClick, idPlayer, thumbImgURL, name, country, emptyImgURL}: Props) => {
+const PlayerItem = ({
+  onClick,
+  idPlayer,
+  thumbImgURL,
+  name,
+  country,
+  emptyImgURL
+}: Props) => {
   return (
     <div className={cx('player-item')} onClick={() => onClick(idPlayer)}>
       <div className={cx('thumb')}>
         { thumbImgURL
-          ? <img src={`${thumbImgURL}`} alt={name} className={cx('thumb-img')}/>
-          : <img src={`${emptyImgURL}`} alt={name} className={cx('empty-img')}/>
+          ? <img src={`${thumbImgURL}`} alt={name} className={cx('thumb-img')} />
+          : <img src={`${emptyImgURL}`} alt={name} className={cx('empty-img')} />
         }
       </div>
       <div className={cx('profile')}>

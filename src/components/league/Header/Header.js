@@ -9,9 +9,11 @@ const cx = classNames.bind(styles);
 
 type Props = {
   currentLeague: string
-};
+}
 
-const Header = ({currentLeague}: Props) => {
+const Header = ({
+  currentLeague
+}: Props) => {
   const findResult = leagueInfo.find(c => c.alias === currentLeague);
 
   const badgeImgURL = require(`static/images/${findResult.badgeImg}`);

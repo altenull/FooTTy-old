@@ -13,7 +13,12 @@ type Props = {
   children: Node
 }
 
-const InfoWrapper = ({established, stadium, manager, children}: Props) => {
+const InfoWrapper = ({
+  established,
+  stadium,
+  manager,
+  children
+}: Props) => {
   return (
     <div className={cx('info-wrapper', 'fade-enter')}>
       <div className={cx('team-infos')}>

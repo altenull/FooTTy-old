@@ -16,7 +16,14 @@ type Props = {
   instagram: ?string,
 }
 
-const Header = ({country, playerName, webSite, facebook, twitter, instagram}: Props) => {
+const Header = ({
+  country,
+  playerName,
+  webSite,
+  facebook,
+  twitter,
+  instagram
+}: Props) => {
   return (
     <HeaderWrapper>
       <div className={cx('header', 'slide-enter')}>
@@ -25,7 +32,7 @@ const Header = ({country, playerName, webSite, facebook, twitter, instagram}: Pr
             {playerName}
           </h1>
         </div>
-        <div className={cx('spacer')}></div>
+        <div className={cx('spacer')} />
         <div className={cx('social-links')}>
           { webSite &&
             <a

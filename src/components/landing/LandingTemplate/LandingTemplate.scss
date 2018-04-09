@@ -1,6 +1,6 @@
 @import 'utils';
 
-.header-style {
+%header-style {
   user-select: none;
   transition: .2s ease-in;
   font-family: 'Heebo';
@@ -19,7 +19,7 @@
     flex-direction: column;
     justify-content: center;
     h1 {
-      @extend .header-style;
+      @extend %header-style;
       color: $oc-gray-6;
       font-size: 5.5rem;
       font-weight: 800;
@@ -40,7 +40,7 @@
       }
     }
     h2 {
-      @extend .header-style;
+      @extend %header-style;
       color: $oc-gray-6;
       font-size: 3.3rem;
       font-weight: 800;
@@ -60,7 +60,7 @@
       }
     }
     h3 {
-      @extend .header-style;
+      @extend %header-style;
       color: $oc-gray-7;
       font-size: 1.8rem;
       font-weight: 700;

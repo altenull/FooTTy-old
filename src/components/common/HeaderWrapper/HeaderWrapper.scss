@@ -1,11 +1,11 @@
 @import 'utils';
 
-.container {
+.wrapper {
   position: fixed;
   left: 0;
   top: 0;
   width: 100%;
-  .header-wrapper {
+  .container {
     display: flex;
     align-items: center;
     justify-content: center;

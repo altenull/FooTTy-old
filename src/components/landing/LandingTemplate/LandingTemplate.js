@@ -35,17 +35,20 @@ class LandingTemplate extends Component<Props> {
             <h1>
               <ReactRevealText
                 show={show}
-                text='FOOTTY' />
+                text='FOOTTY'
+              />
             </h1>
             <h2>
               <ReactRevealText
                 show={show}
-                text='A FOOTBALL TERMINAL' />
+                text='A FOOTBALL TERMINAL'
+              />
             </h2>
             <h3>
               <ReactRevealText
                 show={show}
-                text='SPORTS &nbsp;&nbsp;X&nbsp;&nbsp; TECHNOLOGY' />
+                text='SPORTS &nbsp;&nbsp;X&nbsp;&nbsp; TECHNOLOGY'
+              />
             </h3>
           </div>
           <div className={cx('right-wrapper')}>

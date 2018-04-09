@@ -11,16 +11,20 @@ type Props = {
   children: Node
 }
 
-const TableWrapper = ({latestSeason, children}: Props) => {
+const TableWrapper = ({
+  latestSeason,
+  children
+}: Props) => {
   const prevYear = latestSeason.substring(0, 2);
   const nextYear = latestSeason.substring(2);
+
   return (
     <div className={cx('table-wrapper', 'fade-enter')}>
       <div className={cx('table-header')}>
         <div className={cx('season')}>
           {`${prevYear}/${nextYear} Season`}
         </div>
-        <div className={cx('spacer-flex')}></div>
+        <div className={cx('spacer-flex')} />
         <div className={cx('numeric-data')} title='played'>
           Pl
         </div>

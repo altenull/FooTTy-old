@@ -11,7 +11,11 @@ type Props = {
   profile: Node
 };
 
-const PlayerTemplate = ({header, footer, profile}: Props) => {
+const PlayerTemplate = ({
+  header,
+  footer,
+  profile
+}: Props) => {
   return (
     <div>
       {header}

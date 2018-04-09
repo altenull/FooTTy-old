@@ -11,7 +11,9 @@ type Props = {
   onClick(): void
 }
 
-const Footer = ({onClick}: Props) => {
+const Footer = ({
+  onClick
+}: Props) => {
   return (
     <FooterWrapper>
       <div className={cx('footer', 'slide-enter')}>

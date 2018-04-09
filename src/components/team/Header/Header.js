@@ -17,7 +17,15 @@ type Props = {
   youtube: ?string
 }
 
-const Header = ({badge, teamName, webSite, facebook, twitter, instagram, youtube}: Props) => {
+const Header = ({
+  badge,
+  teamName,
+  webSite,
+  facebook,
+  twitter,
+  instagram,
+  youtube
+}: Props) => {
   return (
     <HeaderWrapper>
       <div className={cx('header', 'slide-enter')}>

@@ -15,7 +15,7 @@ type Props = {
 }
 
 class InfoContainer extends Component<Props> {
-  handleClick = async (idPlayer: string): void => {
+  handleClick = (idPlayer: string): void => {
     PlayerActions.setCurrentPlayerId(idPlayer);
     BaseActions.changeCurrentPage('player');
   }

@@ -16,7 +16,16 @@ type Props = {
   weight: ?string
 }
 
-const ProfileWrapper = ({thumbImgURL, playerName, position, country, birthDay, teamName, height, weight}: Props) => {
+const ProfileWrapper = ({
+  thumbImgURL,
+  playerName,
+  position,
+  country,
+  birthDay,
+  teamName,
+  height,
+  weight
+}: Props) => {
   return (
     <div className={cx('profile-wrapper', 'fade-enter')}>
       { thumbImgURL &&

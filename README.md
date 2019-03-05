@@ -1,6 +1,7 @@
-# FooTTy
+# FooTTy-old
 
-> This service is now available at https://footty.kr/
+> This service is old version of FooTTy.
+> Check the new version one. https://github.com/altenull/FooTTy
 
 <p align="center"><img src="https://s3.ap-northeast-2.amazonaws.com/altenull/github/footty/screen-shot1.png"></p>
 
